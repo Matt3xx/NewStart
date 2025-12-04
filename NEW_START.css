@@ -1,26 +1,30 @@
 /* ============================
    HOME PAGE (NEW START)
    ============================ */
-
+/* HOME WRAPPER centrato */
 .home-wrapper {
-    text-align: center;
-    margin-top: 20px;
+    text-align: center;   /* centra testo e pulsanti */
+    margin-top: 120px;    /* spazio dal menu/logo */
 }
 
+/* Titolo */
 .home-title {
     font-size: 38px;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    color: #7ee7c7;
+    color: #42679e;
+    text-align: center;
 }
 
+/* Sottotitolo */
 .home-subtitle {
     color: #bbb;
     font-size: 17px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
-/* Sezione pulsanti principali */
+/* Pulsanti principali */
 .home-buttons {
     display: flex;
     justify-content: center;
@@ -59,12 +63,11 @@
 
 .home-card p {
     font-size: 16px;
+    text-align: center;
     color: #ddd;
     margin: 0;
     line-height: 1.5;
 }
-
-
 /* . */
 
 body{
@@ -288,86 +291,164 @@ border:1px solid #222;
     font-size:15px;
 }
 
-/* ============================
-   LOGIN PAGE (ACCESSO)
-   ============================ */
+/* LOGO IN ALTO A DESTRA */
+.logo-top {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
 
-.login-wrapper {
+.logo-top img:hover {
+  transform: scale(1.3)
+}
+
+.logo-top img {
+  width: 70px; /* aumenta la dimensione */
+  height: auto;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 0; /* elimina eventuale forma arrotondata */
+}
+
+.logo-top {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  background: #141414; /* colore della forma */
+  padding: 5px; /* spazio intorno al logo */
+  border-radius: 8px; /* forma arrotondata */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-top img {
+  width: 70px; /* aumenta qui la dimensione */
+  height: auto;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logo-top img:hover {
+  transform: scale(1.1);
+}
+
+/*CALENDARIO*/
+.calendar-container {
+    background: rgba(255, 255, 255, 0.1); /* semi-trasparente */
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.calendar-container h1 {
+    margin-bottom: 20px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day-name {
+    font-weight: bold;
+    padding: 10px 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
+.day {
+    height: 80px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
-}
-
-.login-card {
-    background: #141414;
-    width: 85%;
-    max-width: 350px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.05);
-    border: 1px solid #222;
-    text-align: center;
-}
-
-.login-title {
-    font-size: 28px;
-    color: #7ee7c7;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-.login-subtitle {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-/* Input */
-.login-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    background: rgba(255,255,255,0.05);
     border-radius: 8px;
-    border: 1px solid #222;
-    background: #1a1a1a;
-    color: white;
-    font-size: 15px;
-    outline: none;
-    transition: 0.2s;
 }
 
-.login-input:focus {
-    border-color: #7ee7c7;
-}
-
-/* Bottone */
-.login-btn {
-    width: 100%;
-    background: #7ee7c7;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
+.day.event {
+    background: rgba(0, 140, 255, 0.6);
+    color: black;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.25s;
 }
 
-.login-btn:hover {
-    opacity: 0.85;
-    transform: translateY(-3px);
+.calendar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
 }
 
-/* Link registrazione */
-.login-register {
-    margin-top: 15px;
-    color: #7ee7c7;
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
     font-size: 14px;
-    text-decoration: none;
 }
 
-.login-register:hover {
-    text-decoration: underline;
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 140, 255, 0.6);
+    border-radius: 50%;
+}
+
+.legend-text {
+    opacity: 0.9;
+}
+
+/*ICONE*/
+.contact-row {
+  display: flex;
+  justify-content: center; /* centra la riga di loghi */
+  gap: 16px;
+  margin-top: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(4px);
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  background: rgba(255,255,255,0.07);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex-shrink: 0;
+  color: rgba(0, 140, 255, 0.6); /* colore icone (puoi cambiare) */
+}
+
+.contact-text {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* piccolo responsive: solo icone su schermi molto stretti */
+@media (max-width: 420px) {
+  .contact-text { display: none; }
+  .contact-item { padding: 8px; }
 }
